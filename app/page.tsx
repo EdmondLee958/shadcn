@@ -1,5 +1,6 @@
-import React, { ChangeEvent, KeyboardEvent } from 'react';
-import { useEffect } from 'react';
+'use client'
+
+import React, { useState, useEffect, ChangeEvent, KeyboardEvent } from 'react';
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { buttonVariants } from "@/components/ui/button";
