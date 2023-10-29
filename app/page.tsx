@@ -100,15 +100,22 @@ export function TextareaDemo(): JSX.Element {
 
 export default function IndexPage() {
   return (
-    <section className="container mx-auto grid items-center gap-4 pb-8 pt-8 md:py-8">
-      <div
-        className="flex gap-2 justify-center items-center ml-8 mr-8"
-        style={{ minHeight: "100vh", flexDirection: "column" }}
-      >
-        <TextareaDemo></TextareaDemo>
-        <Separator className="bg-gray-300 h-1 w-full"></Separator>
-        <TextareaWithButton />
-      </div>
-    </section>
+    <div className="relative min-h-screen">
+      <Link href="/app/projectpage"> 
+        <Button className="absolute top-0 left-0 m-4">New Project</Button>
+      </Link> 
+      <section className="container mx-auto pb-8 md:py-8">
+        <div
+          className="flex gap-2 justify-center items-center"
+          style={{ flexDirection: "column" }}
+        >
+          <div style={{ marginTop: '40px', width: '80%' }}> 
+            <TextareaDemo></TextareaDemo>
+            <Separator className="bg-gray-300 h-1 w-full"></Separator>
+            <TextareaWithButton />
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
