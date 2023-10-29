@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import Link from "next/link";
+import { siteConfig } from "@/config/site";
 
 export function DialogDemo() {
     return (
@@ -55,13 +57,21 @@ export function DialogDemo() {
     )
   }
 
-const ProjectPage = () => {
+
+export default function ProjectPage() {
   return (
     <div className="relative min-h-screen">
-      <h1>This is the new page</h1>
-      <DialogDemo></DialogDemo>
+            <section className="container mx-auto pb-8 md:py-8">
+        <div
+          className="flex gap-2 justify-center items-center"
+          style={{ flexDirection: "column" }}
+        >
+          <div style={{ marginTop: '40px', width: '80%' }}> 
+            <DialogDemo></DialogDemo>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
 
-export default ProjectPage;

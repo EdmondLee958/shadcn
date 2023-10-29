@@ -1,7 +1,5 @@
-'use client'
-
-import { useEffect } from 'react'
-import React, { useState, ChangeEvent, KeyboardEvent } from 'react';
+import React, { ChangeEvent, KeyboardEvent } from 'react';
+import { useEffect } from 'react';
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { buttonVariants } from "@/components/ui/button";
@@ -10,8 +8,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Separator } from "@/components/ui/separator";
 
 export function TextareaWithButton(): JSX.Element {
-  const [text, setText] = useState<string>(""); // State variable to store the current text
-  const [history, setHistory] = useState<string[]>([]); // Specify the type as an array of strings
+  const [text, setText] = React.useState<string>(""); // State variable to store the current text
+  const [history, setHistory] = React.useState<string[]>([]); // Specify the type as an array of strings
 
   const handleTextareaChange = (e: ChangeEvent<HTMLTextAreaElement>): void => {
     setText(e.target.value); // Update the current text as the user types
@@ -101,7 +99,7 @@ export function TextareaDemo(): JSX.Element {
 export default function IndexPage() {
   return (
     <div className="relative min-h-screen">
-      <Link href="/app/projectpage"> 
+      <Link href="/projectpage"> 
         <Button className="absolute top-0 left-0 m-4">New Project</Button>
       </Link> 
       <section className="container mx-auto pb-8 md:py-8">
